@@ -1,0 +1,129 @@
+[
+    {
+      "Unit_Number": 1,
+      "Unit_Title": "Information Technology Systems",
+      "GLH": 120,
+      "Is_External": true
+    },
+    {
+      "Unit_Number": 2,
+      "Unit_Title": "Creating Systems to Manage Information",
+      "GLH": 90,
+      "Is_External": true
+    },
+    {
+      "Unit_Number": 3,
+      "Unit_Title": "Using Social Media in Business",
+      "GLH": 90,
+      "Is_External": false
+    },
+    {
+      "Unit_Number": 4,
+      "Unit_Title": "Programming",
+      "GLH": 90,
+      "Is_External": false
+    },
+    {
+      "Unit_Number": 5,
+      "Unit_Title": "Data Modelling",
+      "GLH": 60,
+      "Is_External": false
+    },
+    {
+      "Unit_Number": 6,
+      "Unit_Title": "Website Development",
+      "GLH": 60,
+      "Is_External": false
+    },
+    {
+      "Unit_Number": 7,
+      "Unit_Title": "Mobile Apps Development",
+      "GLH": 60,
+      "Is_External": false
+    },
+    {
+      "Unit_Number": 8,
+      "Unit_Title": "Computer Games Development",
+      "GLH": 60,
+      "Is_External": false
+    },
+    {
+      "Unit_Number": 9,
+      "Unit_Title": "IT Project Management",
+      "GLH": 90,
+      "Is_External": false
+    },
+    {
+      "Unit_Number": 10,
+      "Unit_Title": "Big Data and Business Analytics",
+      "GLH": 60,
+      "Is_External": false
+    },
+    {
+      "Unit_Number": 11,
+      "Unit_Title": "Cybersecurity and Incident Management",
+      "GLH": 120,
+      "Is_External": true
+    },
+    {
+      "Unit_Number": 12,
+      "Unit_Title": "IT Technical Support and Management",
+      "GLH": 60,
+      "Is_External": false
+    },
+    {
+      "Unit_Number": 13,
+      "Unit_Title": "Software Testing",
+      "GLH": 60,
+      "Is_External": false
+    },
+    {
+      "Unit_Number": 14,
+      "Unit_Title": "IT Service Delivery",
+      "GLH": 120,
+      "Is_External": true
+    },
+    {
+      "Unit_Number": 15,
+      "Unit_Title": "Customising and Integrating Applications",
+      "GLH": 60,
+      "Is_External": false
+    },
+    {
+      "Unit_Number": 16,
+      "Unit_Title": "Cloud Storage and Collaboration Tools",
+      "GLH": 60,
+      "Is_External": false
+    },
+    {
+      "Unit_Number": 17,
+      "Unit_Title": "Digital 2D and 3D Graphics",
+      "GLH": 60,
+      "Is_External": false
+    },
+    {
+      "Unit_Number": 18,
+      "Unit_Title": "Digital Animation and Effects",
+      "GLH": 60,
+      "Is_External": false
+    },
+    {
+      "Unit_Number": 19,
+      "Unit_Title": "The Internet of Things",
+      "GLH": 60,
+      "Is_External": false
+    },
+    {
+      "Unit_Number": 20,
+      "Unit_Title": "Enterprise in IT",
+      "GLH": 60,
+      "Is_External": false
+    },
+    {
+      "Unit_Number": 21,
+      "Unit_Title": "Business Process Modelling Tools",
+      "GLH": 60,
+      "Is_External": false
+    }
+  ]
+  
