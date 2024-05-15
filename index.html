@@ -41,6 +41,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert2 -->
+
 
     <script>
         let configs = {
@@ -48,7 +50,31 @@
             glh: {},
             total: 0,
         };
+
         $(document).ready(() => {
+
+            Swal.fire({
+                title: "Select your Study Year",
+                html: "<p>Which year are you studying?</p><strong>Year 1</strong>: Foundation Year (510 GLH)<br> <strong>Year 2</strong>: Extended Diploma (1080 GLH)",
+                icon: "info",
+                showCancelButton: true,
+                confirmButtonColor: "#005A70",
+                cancelButtonColor: "#005A70",
+                confirmButtonText: "Year 1 (Foundation)",
+                cancelButtonText: "Year 2 (Extended)",
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+                customClass: {
+                    confirmButton: 'shadow-sm',
+                    cancelButton: 'shadow-sm'
+                }
+            }).then((result) => {
+                $.getJSON(`assets/grades-${result.isConfirmed ? "foundation" : "extended"}.json`, (grades) => {
+                    configs.grades = grades;
+                })
+            })
+                
             $.getJSON("assets/units.json", (data) => {
                 $.each(data, (key, value) => {
                     $("#selGrades").append(`<option value="${btoa(value.Unit_Title + "|" + value.GLH + "|" + value.Unit_Number + "|" + (value.Is_External ? "TRUE" : "FALSE"))}">Unit ${value.Unit_Number} - ${value.Unit_Title} (${value.Is_External == true ? "Exam" : "Assignment"})</option>`);
@@ -85,9 +111,6 @@
                 })
                 $.getJSON("assets/internals.json", (int) => {
                     configs.glh.internal = int;
-                })
-                $.getJSON("assets/grades.json", (grades) => {
-                    configs.grades = grades;
                 })
             }
 
@@ -163,6 +186,8 @@
             $("#config_buttons").append(`<button class="btn btn-danger" onclick="location.reload()">Reset</button>`);
             $("#div_result").append(`<h3 class="text-center">Your Total is: <strong>${configs.total}</strong> & approximate final grade is: <strong>${finalGrade}</strong> <br><p style="color:red">NOTE: This is an approximate grade and may not be 100% accurate.</p></h3>`);
         }
+
     </script>
+
 </body>
 </html>
