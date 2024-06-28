@@ -189,8 +189,10 @@
                 $("#config_buttons").find("button.btn-danger").remove();
             }
 
+            const ucasPoints = configs['ucas_calculator'][finalGrade];
+
             $("#config_buttons").append(`<button class="btn btn-danger" onclick="location.reload()">Reset</button>`);
-            $("#div_result").append(`<h3 class="text-center">Your Approximate final grade is: <strong>${finalGrade}</strong> <br> UCAS Tarrif Points: <strong>${configs['ucas_calculator'][finalGrade]}</strong> <p style="color:red">NOTE: This is an approximate grade and may not be 100% accurate.</p></h3>`);
+            $("#div_result").append(`<h3 class="text-center">Your Approximate final grade is: <strong>${finalGrade}</strong> <br> UCAS Tarrif Points: <strong>${ucasPoints ?? '0'}</strong> <p style="color:red">NOTE: This is an approximate grade and may not be 100% accurate.</p></h3>`);
         }
 
     </script>
