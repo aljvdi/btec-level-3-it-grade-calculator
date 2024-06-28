@@ -36,7 +36,7 @@
 
     <center>
         <footer class="mt-5">
-            <p>&copy; 2024 - <a href="https://aljm.org" target="_blank">Alex Javadi</a></p>
+            <p>&copy; 2024 - <a href="https://aljm.org" rel="noopener" target="_blank">Alex Javadi</a></p>
         </footer>
     </center>
 
@@ -75,6 +75,10 @@
                 $.getJSON(`assets/grades-${result.isConfirmed ? "foundation" : "extended"}.json`, (grades) => {
                     configs.grades = grades;
                 })
+
+                $.getJSON(`assets/ucas-calculator-${result.isConfirmed ? "foundation" : "extended"}.json`, (ucas_calc) => {
+                    configs.ucas_calculator = ucas_calc;
+                })                
             })
                 
             $.getJSON("assets/units.json", (data) => {
@@ -186,7 +190,7 @@
             }
 
             $("#config_buttons").append(`<button class="btn btn-danger" onclick="location.reload()">Reset</button>`);
-            $("#div_result").append(`<h3 class="text-center">Your Total is: <strong>${configs.total}</strong> & approximate final grade is: <strong>${finalGrade}</strong> <br><p style="color:red">NOTE: This is an approximate grade and may not be 100% accurate.</p></h3>`);
+            $("#div_result").append(`<h3 class="text-center">Your Approximate final grade is: <strong>${finalGrade}</strong> <br> UCAS Tarrif Points: <strong>${configs['ucas_calculator'][finalGrade]}</strong> <p style="color:red">NOTE: This is an approximate grade and may not be 100% accurate.</p></h3>`);
         }
 
     </script>
